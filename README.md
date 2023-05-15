@@ -29,3 +29,12 @@ A simple library for drawing color emoji for Typst. Drawing using [twemoji](http
 The [simple.typ](examples/simple.typ) example draws the following effect.
 
 ![](_assets/examples-simple.png)
+
+# Manually update emoji
+
+>  By default, emoji images may not be the latest. If there is a need, you can manually update the latest emoji images
+
+```bash
+./update-emoji
+```
+
