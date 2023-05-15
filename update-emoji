@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Update twemoji
+cd twemoji
+rm .git -rf
+git init
+git remote add origin https://github.com/twitter/twemoji
+git config core.sparsecheckout true
+echo "/assets/svg" > .git/info/sparse-checkout
+echo "/LICENSE"   >> .git/info/sparse-checkout
+echo "/LICENSE-GRAPHICS" >> .git/info/sparse-checkout
+echo "/README.md" >> .git/info/sparse-checkout
+git clean -xfd
+git pull --depth=1 origin master
+rm .git -rf
+cd ../
+
+# Update openmoji
+cd openmoji
+rm .git -rf
+git init
+git remote add origin https://github.com/hfg-gmuend/openmoji
+git config core.sparsecheckout true
+echo "/color/svg" > .git/info/sparse-checkout
+echo "/LICENSE.txt" >> .git/info/sparse-checkout
+echo "/README.md" >> .git/info/sparse-checkout
+git clean -xfd
+git pull --depth=1 origin master
+rm .git -rf
+cd ../
