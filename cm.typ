@@ -1,9 +1,9 @@
 
-#let t-cm(id) = box[
+#let t-cm(id) = box(baseline: 14.5%)[
   #image(width: 1.0em, "twemoji/assets/svg/" + id + ".svg")
 ]
 
-#let o-cm(id) = box[
+#let o-cm(id) = box(baseline: 14.5%)[
   #image(width: 1.0em, "openmoji/color/svg/" + upper(id) + ".svg")
 ]
 
